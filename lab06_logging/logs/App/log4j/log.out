@@ -1,0 +1,31 @@
+2026-09-30 09:49:17,071 INFO [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Application is starting...
+2026-09-30 10:01:16,788 INFO [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Application is starting...
+2026-09-30 10:01:16,789 DEBUG [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.model.WalletAccount - Wallet account created with balance: 1000.0
+2026-09-30 10:01:16,789 DEBUG [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.model.WalletAccount - Withdraw requested. Amount: 1500.0
+2026-09-30 10:01:16,790 WARN [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.exceptions.InsufficientFundsException - InsufficientFundsException object created: Insufficient funds. Your balance is 1000.0
+2026-09-30 10:01:16,790 ERROR [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Exception thrown: Insufficient funds. Your balance is 1000.0
+2026-09-30 10:01:16,790 DEBUG [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.model.WalletAccount - Deposit requested. Amount: -100.0
+2026-09-30 10:01:16,790 ERROR [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Exception thrown: Cannot deposit negative number: -100.0
+2026-09-30 10:01:16,791 INFO [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Application is ending...
+2026-09-30 10:05:27,155 INFO [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Application is starting...
+2026-09-30 10:05:27,157 DEBUG [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.model.WalletAccount - Wallet account created with balance: 1000.0
+2026-09-30 10:05:27,157 DEBUG [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.model.WalletAccount - Withdraw requested. Amount: 1500.0
+2026-09-30 10:05:27,157 WARN [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.exceptions.InsufficientFundsException - InsufficientFundsException object created: Insufficient funds. Your balance is 1000.0
+2026-09-30 10:05:27,158 ERROR [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Exception thrown while withdrawing funds
+edu.spu.se411.lab06_logging.exceptions.InsufficientFundsException: Insufficient funds. Your balance is 1000.0
+	at edu.spu.se411.lab06_logging.model.WalletAccount.withdraw(WalletAccount.java:25)
+	at edu.spu.se411.lab06_logging.App.main(App.java:20)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-09-30 10:05:27,160 DEBUG [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.model.WalletAccount - Deposit requested. Amount: -100.0
+2026-09-30 10:05:27,160 ERROR [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Exception thrown while depositing funds
+java.lang.IllegalArgumentException: Cannot deposit negative number: -100.0
+	at edu.spu.se411.lab06_logging.model.WalletAccount.deposit(WalletAccount.java:36)
+	at edu.spu.se411.lab06_logging.App.main(App.java:27)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doMain(ExecJavaMojo.java:375)
+	at org.codehaus.mojo.exec.ExecJavaMojo.doExec(ExecJavaMojo.java:364)
+	at org.codehaus.mojo.exec.ExecJavaMojo.lambda$execute$0(ExecJavaMojo.java:286)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2026-09-30 10:05:27,160 INFO [edu.spu.se411.lab06_logging.App.main()] edu.spu.se411.lab06_logging.App - Application is ending...
